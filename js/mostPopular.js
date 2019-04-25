@@ -1,5 +1,5 @@
 function loadMostPopularImage() {
-    fetch(buildUrl('/top'))
+    fetch(buildUrl(''))
         .then(function (response) {
             if (response.status !== 200) {
                 throw new Error('Request return status code !== 200: ' + response.status + ' - ')
@@ -7,10 +7,8 @@ function loadMostPopularImage() {
             return response.json();
         })
         .then(function (json) {
-            console.log('Request to /top succeeded: ');
+            console.log('Request succeeded: ');
             console.log(json);
-
-            photoId = json.id;
 
             var mainImage = $('#main-image');
             mainImage.attr('src', json.url);
@@ -26,7 +24,7 @@ function loadMostPopularImage() {
             license.text(json.license);
         })
         .catch(function (err) {
-            console.error('Request to /top failed: ', err);
+            console.error('Request failed: ', err);
         });
 }
 
