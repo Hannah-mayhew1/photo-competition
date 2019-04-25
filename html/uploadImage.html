@@ -1,8 +1,7 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Essential meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Softwire Web Development Training Example">
     <meta name="author" content="Softwire">
@@ -18,11 +17,9 @@
 
     <!-- Custom JS -->
     <script src="../js/common.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/uploadImage.js"></script>
 </head>
-
 <body>
-
 <!-- Navigation bar -->
 <nav class="navbar">
     <ul class="navbar-list">
@@ -31,41 +28,21 @@
         <li class="navbar-item"><a class="navbar-link" href="mostPopularImage.html">Most Popular Photograph</a></li>
         <li class="navbar-item"><a class="navbar-link" href="uploadImage.html">Enter the competition!</a></li>
         <li class="navbar-item"><a class="navbar-link" href="moderatorLogin.html">Moderator Login</a></li>
+
     </ul>
 </nav>
 
 <!-- Page content -->
 <div class="main-content">
-    <h1 class="page-title">Photo Competition</h1>
+    <h1 class="page-title">Enter our competition!</h1>
     <noscript>Your browser does not support Javascript therefore you may be missing some content.</noscript>
-
-    <div class="image-container">
-        <!-- src and alt attribute will be populated by index.js on page load -->
-        <img id="main-image" src="">
-    </div>
-
-    <div class="voting-buttons">
-        <button onclick="voteUp()" class="voting-button vote-up">I love it</button>
-        <button onclick="voteDown()" class="voting-button vote-down">I hate it</button>
-    </div>
-
-    <table class="image-details">
-        <tbody>
-            <tr>
-                <td><b>Author:</b></td>
-                <td id="authorName"></td>
-            </tr>
-            <tr>
-                <td><b>Name:</b></td>
-                <td id="photographName"></td>
-            </tr>
-            <tr>
-                <td><b>Licence:</b></td>
-                <td id="license"></td>
-            </tr>
-        </tbody>
-    </table>
+    <form>
+        <input type="file" name="file" placeholder="Upload filename..." required>Upload File:<br>
+        <input id="name-input" type="text" name="name" placeholder="Enter photograph name..." required>Photograph Name:<br>
+        <input id="author-input" type="text" name="author" placeholder="Enter author's name..."required>Author:<br>
+        <input id="license-input" type="text" name="license" placeholder="Enter license..."required>License:<br>
+        <button type="button" onclick="uploadImage()">Submit entry!</button><br>
+    </form>
 </div>
-
 </body>
 </html>

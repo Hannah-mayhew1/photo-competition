@@ -18,8 +18,12 @@
 }
 
 .navbar {
-  background-color: #DDDDDD;
-  height: 64px;
+  background-image: url("resources/static/images/photographylogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 150px;
+  width: 100%;
 }
 
 .navbar-list {
@@ -27,13 +31,27 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin: 0;
+  margin-left: 300px;
+  margin-top: 0px;
   padding: 0;
   list-style: none;
 }
 
+.navbar-item a:-webkit-any-link{
+  margin-top: 110px;
+  margin-right: 30px;
+  font-family: "American Typewriter", sans-serif;
+  font-size:1.5vw;
+  color: #525252; !important;
+  text-decoration: none; !important;
+
+}
+
 body {
   margin: 0;
+  background-color: lavenderblush;
+  color: #525252;
+  font-family: "American Typewriter", sans-serif;
 }
 
 .main-content {
